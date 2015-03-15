@@ -13,3 +13,4 @@ gem 'spring',        group: :development
 gem 'haml'
 gem 'devise'
 gem 'simple_form'
+gem 'bootstrap-sass'
