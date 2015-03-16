@@ -1,8 +1,12 @@
-%h1 Topics
--@posts.each do |post|
-  %h2=link_to post.title,post_path(post)
-  %p.date
-    Published at
-    =time_ago_in_words(post.created_at)
-    by
-    =post.user.email
+#pages
+  .panel.panel-default
+    .panel-header
+      %h2 Forum bejegyzesek
+    .panel-body
+      -@posts.each do |post|
+        %h2=link_to post.title,post_path(post)
+        .date
+          Publikalta:
+        .small=post.user.email
+        =time_ago_in_words(post.created_at)
+        %p=truncate(post.content, :length => 120)

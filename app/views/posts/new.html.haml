@@ -1,5 +1,8 @@
-
-%h1 New Topic
-=render 'form'
-
-=link_to "Home", posts_path
+#pages
+  .panel.panel-default
+    .panel-header
+      %h2 Uj tema inditasa
+    .panel-body
+      =render 'form'
+    .panel-footer
+      =link_to "Home", posts_path, class:"btn btn-default"

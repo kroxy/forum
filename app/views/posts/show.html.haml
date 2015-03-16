@@ -1,9 +1,13 @@
-#post_content
-  %h1=@post.title
-  %p=@post.content
-
-  #comments
-    %h2=@post.comments.count
-    =render @post.comments
-    %h3 Add comment to topic
-    =render 'comments/form'
+#pages
+  .panel.panel-default
+    .panel-header
+      %h2=@post.title
+    .panel-body
+      %p=@post.content
+      #comments
+        %h2=@post.comments.count
+        %p
+        hozzaszolas
+        =render @post.comments
+        %h2 Szoljon hozza a temahoz
+        =render 'comments/form'

@@ -1,4 +1,8 @@
-=simple_form_for @post do |f|
-  =f.input :title
-  =f.input :content
-  =f.button :submit
+#commentform
+  =simple_form_for @post do |f|
+    .form-group
+      = f.input :title,label: 'Az uj belegyzes cime', autofocus: true, input_html: { class: 'form-control'}
+    .form-group
+      = f.input :content, label:'Az uj bejegyzes szovege', input_html: { class: 'form-control',rows:"14"}
+    .form-group
+      = f.button :submit, class: "btn-default"
