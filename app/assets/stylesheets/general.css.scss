@@ -1,0 +1,25 @@
+$green: #39CF29;
+
+#logo{
+  width: 100px;
+  border: 2px solid;
+  border-color: $green;
+}
+#title{
+  margin-left: 15px;
+  font-size: 24px;
+ color: $green;
+}
+.navbar-nav > li > a {
+  border: 2px solid;
+  border-color: $green;
+}
+h2{
+  a {
+    color: $green;
+  }
+}
+.bg{
+  background-image: url("kastely.jpg");
+  background-size: cover;
+}

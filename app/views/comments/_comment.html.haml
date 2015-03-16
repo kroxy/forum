@@ -1,0 +1,7 @@
+.comment
+  .date
+    Published at
+    =time_ago_in_words(comment.created_at)
+    by
+    =comment.user.email
+  %p=comment.content
