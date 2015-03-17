@@ -4,6 +4,7 @@
 $green2: #12501B;
 $yellow: #FBFFA6;
 $green: #39CF29;
+$withe:#fefefe;
 #welcome{
   .panel{
       width: auto;
@@ -18,7 +19,7 @@ $green: #39CF29;
       text-align: center;
     }
     .panel-body{
-       background-color: $yellow;
+       background-color: $withe;
        font-size: 18px;
       font-weight: bold;
 

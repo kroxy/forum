@@ -1,7 +1,7 @@
 #formself
+  .row
   =simple_form_for([@post,@post.comments.build]) do |f|
     .form-group
       = f.input :content,label: false, input_html: { class: 'form-control',rows:"10"}
     .form-group
-      .navbar-right
-        = f.button :submit,'Új hozzászólás', class: "btn-default"
+      .navbar-right= f.button :submit,'Új hozzászólás', class: "btn-default"

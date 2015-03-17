@@ -1,6 +1,7 @@
 $green2: #12501B;
 $yellow: #FBFFA6;
 $green: #39CF29;
+$withe:#fefefe;
 
 #logo{
   width: 100px;
@@ -9,8 +10,10 @@ $green: #39CF29;
 }
 #title{
   margin-left: 15px;
-  font-size: 24px;
- color: $green;
+  font-size: 32px;
+  font-weight: bold;
+  color: $yellow;
+  font-style: italic;
 }
 .navbar-nav > li > a {
   border: 2px solid;
@@ -29,7 +32,7 @@ h2{
 }
 #login{
   .panel.panel-default {
-    background-color: $yellow;
+    background-color: $withe;
     .btn{
       padding: 10px;
       border-radius: 10px;
@@ -42,7 +45,7 @@ h2{
 }
 #signup{
   .panel.panel-default {
-    background-color: $yellow;
+    background-color: $withe;
     .btn{
       padding: 10px;
       border-radius: 10px;
@@ -56,7 +59,7 @@ h2{
 
 #edit {
   .panel.panel-default {
-    background-color: $yellow;
+    background-color: $withe;
     margin: 10px;
     .btn {
       padding: 10px;

@@ -3,17 +3,18 @@
     .panel-header
       %h2=@post.title
     .panel-body
+      .row
       - if @post.image.present?
         .col-md-2
           =image_tag @post.image.url(:medium)
         .col-md-10
-          =@post.content
+          %p=@post.content
       -else
-        =@post.content
-      #comments
-        %h2=@post.comments.count
-        %p
-        hozzászolás
-        =render @post.comments
-        %h2 Szóljon hozzá Ön is a témához!
-        =render 'comments/form'
+        %p=@post.content
+      .row
+      %h2=@post.comments.count
+      %p
+      hozzászolás
+      =render @post.comments
+      %h2 Szóljon hozzá Ön is a témához!
+      =render 'comments/form'
