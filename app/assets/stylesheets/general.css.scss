@@ -23,7 +23,9 @@ h2{
 }
 .bg{
   background-image: url("kastely.jpg");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 #login{
   .panel.panel-default {

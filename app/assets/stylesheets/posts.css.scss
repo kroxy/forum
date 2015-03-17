@@ -66,9 +66,11 @@ $white: #ffffff;
     border: 1px solid;
     background-color: $green2;
     color: white;
+  }
+  .navbar-right{
+    margin-right: 4px;
 
-
-}
+  }
 }
 #commentform{
   .btn-default{

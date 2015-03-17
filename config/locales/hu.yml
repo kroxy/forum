@@ -191,3 +191,7 @@ hu:
       long: "%Y. %B %e., %A, %H:%M"
       short: "%b %e., %H:%M"
     pm: du.
+  will_paginate:
+      previous_label: "&#8592; Előző oldal"
+      next_label: "Következő oldal &#8594;"
+      page_gap: "&hellip;"

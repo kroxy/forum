@@ -9,4 +9,8 @@
           Publikálta:
         .small=post.user.email
         =time_ago_in_words(post.created_at)
-        %p=truncate(post.content, :length => 120)
+        %p=truncate(post.content, :length => 500)
+      %nav
+        %ul.pager
+          %li
+            = will_paginate @posts
