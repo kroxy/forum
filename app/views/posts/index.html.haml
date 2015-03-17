@@ -6,10 +6,12 @@
       -@posts.each do |post|
         %h2=link_to post.title,post_path(post)
         .date
+          %span.glyphicon.glyphicon-pencil{"aria-hidden" => "true"}
           Publikálta:
         .small=post.user.email
         =time_ago_in_words(post.created_at)
         %p=truncate(post.content, :length => 500)
+        %hr
       %nav
         %ul.pager
           %li
