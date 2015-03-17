@@ -1,8 +1,8 @@
 #commentform
   =simple_form_for @post do |f|
     .form-group
-      = f.input :title,label: 'Az uj belegyzes cime', autofocus: true, input_html: { class: 'form-control'}
+      = f.input :title,label: 'Az új belegyzés cime', autofocus: true, input_html: { class: 'form-control'}
     .form-group
-      = f.input :content, label:'Az uj bejegyzes szovege', input_html: { class: 'form-control',rows:"14"}
+      = f.input :content, label:'Az új bejegyzés szövege', input_html: { class: 'form-control',rows:"14"}
     .form-group
       = f.button :submit, class: "btn-default"

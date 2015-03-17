@@ -1,12 +1,12 @@
 #pages
   .panel.panel-default
     .panel-header
-      %h2 Forum bejegyzesek
+      %h2 Forum bejegyzések
     .panel-body
       -@posts.each do |post|
         %h2=link_to post.title,post_path(post)
         .date
-          Publikalta:
+          Publikálta:
         .small=post.user.email
         =time_ago_in_words(post.created_at)
         %p=truncate(post.content, :length => 120)
