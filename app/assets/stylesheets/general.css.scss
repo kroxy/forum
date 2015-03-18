@@ -2,20 +2,13 @@ $green2: #12501B;
 $yellow: #FBFFA6;
 $green: #39CF29;
 $withe:#fefefe;
-.bg {
-  text-align: center;
-  color: #fff;
-  background-attachment: scroll;
-  background-image: url(kastely.jpg);
-  background-position: center center;
-  background-repeat: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+
+body{
+  background-image: url("../../../vendor/assets/kastely.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
-
-
 #logo{
   width: 100px;
   border: 2px solid;
