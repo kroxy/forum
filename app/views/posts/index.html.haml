@@ -13,7 +13,7 @@
           .small
             =post.user.email
             =time_ago_in_words(post.created_at)
-          %p=truncate(post.content, :length => 500)
+          %p=simple_format(truncate(post.content, :length => 500))
           =post.comments.count
           hozzászolás a cikkhez
         %hr

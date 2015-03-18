@@ -5,12 +5,12 @@
     .panel-body
       .row
       - if @post.image.present?
-        .col-lg-3.col-md-4.col-sm-6.col-xs-12
+        .col-lg-2.col-md-4.col-sm-6.col-xs-12
           =image_tag @post.image.url(:medium)
-        .col-lg-9.col-md-8.col-sm-6
-          %p=@post.content
+        .col-lg-10.col-md-8.col-sm-6
+          %p=simple_format(@post.content)
       -else
-        %p=@post.content
+        %p=simple_format(@post.content)
       .col-md-12
         .btn-group.pull-right
           =link_to like_post_path(@post),method: :put,class: "btn btn-default" do
