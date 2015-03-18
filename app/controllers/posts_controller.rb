@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except:[:index,:show]
-  before_action :find_post, only: [:show,:edit,:update,:destroy]
+  before_action :find_post, only: [:show,:edit,:update,:destroy,:upvote]
   def index
     @posts=Post.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
   end
@@ -28,6 +28,11 @@ class PostsController < ApplicationController
   def update
 
   end
+  def upvote
+    @post.upvote_by current_user
+    redirect_to :back
+
+  end
 
   def destroy
     @post.destroy
@@ -38,6 +43,6 @@ class PostsController < ApplicationController
     @post=Post.find(params[:id])
   end
   def post_params
-    params.require(:post).permit(:title,:content,:image)
+    params.require(:post).permit(:title,:content,:image,:upvote)
   end
 end

@@ -18,5 +18,6 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem "will_paginate", ">=3.0.pre2"
 gem 'paperclip'
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'pg', group: :production
