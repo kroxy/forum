@@ -21,3 +21,4 @@ gem 'paperclip'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'pg', group: :production
+gem 'rails_12factor', group: :production
