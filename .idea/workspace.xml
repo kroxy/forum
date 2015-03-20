@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c60be3b-9262-407b-af94-f40ca028d6b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/authenticate_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/authenticate_controller.rb" />
     </list>
     <ignored path="forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,8 +164,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20150320203752_change_email_uniqueness.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150320211227_change_user_email.rb" />
         <option value="$PROJECT_DIR$/config/initializers/onmiauth.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/authenticate_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/authenticate_controller.rb" />
       </list>
     </option>
   </component>
