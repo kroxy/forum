@@ -13,6 +13,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'haml'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'oauth2'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'devise-i18n'
