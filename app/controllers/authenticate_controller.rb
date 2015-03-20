@@ -13,7 +13,6 @@ class AuthenticateController < ApplicationController
     else
       # Authentication not found, thus a new user.
       user = User.new
-      user.email=auth['email']
       user.apply_omniauth(auth)
       if user.save(:validate => false)
         flash[:notice] = "Account created and signed in successfully."
