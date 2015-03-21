@@ -20,7 +20,7 @@
           %li=link_to "Kijelentkezést",destroy_user_session_path, method: :delete, class:"btn btn-default navbar-btn"
       -else
         %ul.nav.navbar-nav.navbar-right
-          %li=link_to 'Login with Facebook', '/auth/facebook/', class:"btn btn-default navbar-btn"
+          %li= link_to "Belépés Facebook fiókkal", user_omniauth_authorize_path(:facebook),class:"btn btn-default navbar-btn"
           %li=link_to "Új téma indítása",new_post_path, class:"btn btn-default navbar-btn"
           %li=link_to "Az összes bejegyzés", posts_path, class:"btn btn-default navbar-btn"
           %li=link_to "Bejelentkezés",new_user_session_path,class:"btn btn-default navbar-btn"

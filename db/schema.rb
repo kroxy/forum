@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320211227) do
+ActiveRecord::Schema.define(version: 20150321174128) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,15 +46,6 @@ ActiveRecord::Schema.define(version: 20150320211227) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
-  create_table "authentications", force: true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "token"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "comments", force: true do |t|
     t.integer  "user_id"
     t.integer  "post_id"
@@ -76,7 +67,7 @@ ActiveRecord::Schema.define(version: 20150320211227) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: ""
+    t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -88,6 +79,9 @@ ActiveRecord::Schema.define(version: 20150320211227) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -2,18 +2,24 @@ class User < ActiveRecord::Base
   # Include default devise_x modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,:omniauthable
   has_many :posts
   has_many :comments
-  has_many :authentications, :dependent => :delete_all
-
-
-
-  def apply_omniauth(auth)
-    # In previous omniauth, 'user_info' was used in place of 'raw_info'
-    self.email = auth['extra']['raw_info']['email']
-    # Again, saving token is optional. If you haven't created the column in authentications table, this will fail
-    authentications.build(:provider => auth['provider'], :uid => auth['uid'], :token => auth['credentials']['token'])
-  end
-
+  def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
+  user = User.where(:provider => auth.provider, :uid => auth.uid).first
+  if user
+    return user
+  else
+    registered_user = User.where(:email => auth.info.email).first
+    if registered_user
+      return registered_user
+    else
+      user = User.create(name:auth.extra.raw_info.name,
+                         provider:auth.provider,
+                         uid:auth.uid,
+                         email:auth.info.email,
+                         password:Devise.friendly_token[0,20],
+      )
+    end    end
+end
 end
