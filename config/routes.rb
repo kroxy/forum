@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     root 'posts#index', as: "authenticated_root"
   end
       root 'welcome#index'
-  post '/auth/:facebook/callback' => 'authenticate#create'
+  put '/auth/:facebook/callback' => 'authenticate#create'
 
 end
