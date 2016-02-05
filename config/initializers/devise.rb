@@ -5,9 +5,11 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
    config.secret_key = '6a382fa1ff29bced4ee39f0ef35a1c0c02385e6bf185b18ca976004a4ef8151cc6d10a6f9ecea24afe6c7c2bb8e7b70a79aca22f24c3613d865cc2ee2128f956'
+   require "omniauth-facebook"
+   config.omniauth :facebook, "369494313259117", "81e1596d7fe0b9d3aaf4608ee5311df4"
 
 
-  # ==> Mailer Configuration
+   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
@@ -233,8 +235,6 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-   require "omniauth-facebook"
-   config.omniauth :facebook, "622581664543484", "4bfdc2d4e18c6de0c96ddafc496bb565"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

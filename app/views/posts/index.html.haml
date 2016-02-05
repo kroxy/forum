@@ -5,8 +5,8 @@
     .panel-body
       -@posts.each do |post|
         %h2=link_to post.title,post_path(post)
-        - if post.image.present?
-          =image_tag post.image.url(:medium),id:"smallimage"
+        - if post.imagess.present?
+          =image_tag post.imagess.small_image,id:"smallimage"
         .date
           %span.glyphicon.glyphicon-pencil{"aria-hidden" => "true"}
           Publikálta:

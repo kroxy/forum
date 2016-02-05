@@ -4,8 +4,8 @@
       %h2=@post.title
     .panel-body
       .row.col-lg-12
-      - if @post.image.present?
-        =image_tag @post.image.url(:medium),id:"mediumimage"
+      - if @post.imagess.present?
+        =image_tag @post.imagess.large_image,id:"mediumimage"
         %p=simple_format(@post.content)
       -else
         %p=simple_format(@post.content)
